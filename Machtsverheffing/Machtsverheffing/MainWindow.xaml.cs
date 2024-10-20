@@ -33,7 +33,7 @@ namespace Machtsverheffing
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
     }
 }
