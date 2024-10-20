@@ -28,7 +28,9 @@ namespace Machtsverheffing
 
         private void eraseButton_Click(object sender, RoutedEventArgs e)
         {
-
+            numberTextBox.Clear();
+            resultTextBox.Clear();
+            numberTextBox.Focus();
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
