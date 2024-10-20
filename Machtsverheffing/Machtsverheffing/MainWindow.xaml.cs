@@ -23,7 +23,26 @@ namespace Machtsverheffing
 
         private void calculateButton_Click(object sender, RoutedEventArgs e)
         {
+            long Startnumber;
+            bool isValid = long.TryParse(numberTextBox.Text, out Startnumber);
+            long number = Startnumber;
+            long exponent = 1;
+            StringBuilder result = new StringBuilder();
+            if (isValid)
+            {
+                do
+                {
+                    number *= Startnumber;
+                    result.AppendLine($"De macht {exponent} van {numberTextBox.Text} is {number}.");
+                    exponent++;
+                } while (exponent <= 10);
+            }
+            else
+            {
+                MessageBox.Show("Geen geldig getal");
+            }
 
+            resultTextBox.Text = result.ToString();
         }
 
         private void eraseButton_Click(object sender, RoutedEventArgs e)
